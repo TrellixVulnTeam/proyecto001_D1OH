@@ -20,13 +20,9 @@ export class EmpleadoComponent implements OnInit {
 
   //empresa = "Píldoras Informáticas";
 
-  llamaEmpresa(value:String){
-    
+  // llamaEmpresa(value:String){
 
-
-
-
-  }
+  // }
 
   getEdad(){
     return this.edad
