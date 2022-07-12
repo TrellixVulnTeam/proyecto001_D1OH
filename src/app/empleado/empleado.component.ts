@@ -14,9 +14,13 @@ export class EmpleadoComponent implements OnInit {
 
   nombre = "Juan";
 
-  apellido = "Díaz";
+  apellido = "Díaz" ;
 
   private edad = 7;
+
+  habilitarCuadro = true; 
+
+  userRegistrado = false; 
 
   //empresa = "Píldoras Informáticas";
 
@@ -27,6 +31,17 @@ export class EmpleadoComponent implements OnInit {
   getEdad(){
     return this.edad
   }
+
+  getRegistro(){
+    this.userRegistrado = true; 
+
+  }
+
+  habilitacion(){
+
+    this.habilitarCuadro === true? this.habilitarCuadro = false:this.habilitarCuadro = true; 
+  }
+
 
   constructor() { }
 

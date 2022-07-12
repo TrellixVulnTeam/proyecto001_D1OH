@@ -7,6 +7,7 @@ import { empleadoscomponent } from './Empleados/empleados.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent, empleadoscomponent, EmpleadoComponent

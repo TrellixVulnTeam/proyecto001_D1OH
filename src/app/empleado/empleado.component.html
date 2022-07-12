@@ -3,9 +3,19 @@
 <p>Edad del empleado: {{ getEdad()<18? 'Menor de edad':'Mayor de edad' }}</p>
 <p>Empresa del empleado: {{empresa.value}}</p>
 
-<p>Introduce la empresa</p> <input type="text" #empresa (keyup)="0"> 
+<p>Introduce la empresa</p> <input type="text" #empresa (keyup)="0" [disabled] = "habilitarCuadro" > 
  <br>
  <br>
  
+ 
+<input type="button" value="habilitar" (click)="habilitacion()">
+
+<br>
+<br>
+
+<label for="registro">Registrado: </label> <input type="checkbox" id="registro" [checked] = "userRegistrado" >
+
+{{getRegistro()}} <!-- Llamada a una función que cambia el checkbox-->
+
  <!-- <input type="button" value="pulsame" (click)="llamaEmpresa(empresa.value)"> -->
 
