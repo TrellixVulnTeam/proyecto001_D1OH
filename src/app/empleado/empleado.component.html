@@ -1,19 +1,30 @@
 <p>Nombre del empleado: {{nombre}}</p>
 <p>Apellido del empleado: {{apellido}}</p>
 <p>Edad del empleado: {{ getEdad()<18? 'Menor de edad':'Mayor de edad' }}</p>
-<p>Empresa del empleado: {{empresa.value}}</p>
+<p>Empresa del empleado: {{empresa}}</p>
 
-<p>Introduce la empresa</p> <input type="text" #empresa (keyup)="0" [disabled] = "habilitarCuadro" > 
+<!-- <p>Introduce la empresa</p> <input type="text" #empresa (keyup)="0" [disabled] = "habilitarCuadro" >  -->
  <br>
  <br>
  
  
-<input type="button" value="habilitar" (click)="habilitacion()">
+<!-- <input type="button" value="habilitar" (click)="habilitacion()"> -->
+
+
+<p>Introduce la empresa</p> <input type="text" [(ngModel)]="empresa">
 
 <br>
 <br>
 
-<label for="registro">Registrado: </label> <input type="checkbox" id="registro" [checked] = "userRegistrado" >
+{{textoRegistro}}
+
+<br>
+<br>
+
+<!-- <label for="registro">Registrado: </label> <input type="checkbox" id="registro" [checked] = "userRegistrado" (click) = "setUruarioRegistrado()"> -->
+
+Registrado: <input type="radio" value="si" name="reg" id="Reg" (click) = "setUruarioRegistrado($event)">
+No registrado: <input type="radio" value="no" name="reg" id="NoR" (click) = "setUruarioRegistrado($event)">
 
 {{getRegistro()}} <!-- Llamada a una función que cambia el checkbox-->
 

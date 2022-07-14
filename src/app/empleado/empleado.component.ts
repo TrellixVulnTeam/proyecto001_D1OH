@@ -22,7 +22,11 @@ export class EmpleadoComponent implements OnInit {
 
   userRegistrado = false; 
 
-  //empresa = "Píldoras Informáticas";
+  textoRegistro = "No hay nadie registrado"
+
+  empresa = "Google";
+
+  
 
   // llamaEmpresa(value:String){
 
@@ -33,8 +37,25 @@ export class EmpleadoComponent implements OnInit {
   }
 
   getRegistro(){
-    this.userRegistrado = true; 
+    this.userRegistrado = false; 
 
+  }
+
+  setUruarioRegistrado(event:Event){
+
+    //alert("El usuario se acaba de registrar") 
+
+    if((<HTMLInputElement>event.target).value == "si"){
+      this.textoRegistro = "El usuario se acaba de registrar"
+
+
+    }else{
+
+      this.textoRegistro = "No hay nadie registrado"
+
+    }
+
+    
   }
 
   habilitacion(){

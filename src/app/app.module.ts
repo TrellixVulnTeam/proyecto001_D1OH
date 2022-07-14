@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { empleadoscomponent } from './Empleados/empleados.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +13,7 @@ import { empleadoscomponent } from './Empleados/empleados.component';
     AppComponent, empleadoscomponent, EmpleadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
